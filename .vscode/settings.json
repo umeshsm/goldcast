@@ -1,0 +1,11 @@
+{
+  "css.customData": [".vscode/tailwind.json"],
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "always",
+    "source.fixAll": "explicit"
+  },
+  "files.associations": {
+    "*.xml": "html",
+    "*.svg": "html"
+  }
+}
