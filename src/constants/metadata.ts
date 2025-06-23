@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 
+import { SOCIALS } from './socials';
+
 export const DEFAULT_METADATA: Metadata = {
   title: 'Goldcast | Umesh S M',
   description:
@@ -14,4 +16,5 @@ export const DEFAULT_METADATA: Metadata = {
       'Goldcast is an AI-powered Video Content Platform helping B2B marketers create and amplify video content that drives engagement, brand authority, and revenue.',
     images: ['/images/favicon.png'],
   },
+  metadataBase: new URL(SOCIALS.website),
 };
