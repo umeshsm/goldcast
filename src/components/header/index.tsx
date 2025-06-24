@@ -4,7 +4,7 @@ import { Menu, X } from 'lucide-react';
 import Link from 'next/link';
 import { useToggle } from 'react-use';
 
-import AnimatedLink, { AnimatedLinkProps } from '@/components/AnimatedLink';
+import AnimatedLink, { AnimatedLinkProps } from '@/components/animated-link';
 import Container from '@/components/container';
 import Logo from '@/components/logo';
 import { Button } from '@/components/ui/button';
@@ -46,7 +46,7 @@ export default function Header() {
 
       {/* Mobile Menu Overlay */}
       {isMenuOpen && (
-        <Container className="fixed top-14 right-0 left-0 z-50 bg-black pb-10 md:top-18 lg:hidden">
+        <Container className="fixed top-14 left-0 z-50 w-full max-w-[100vw] bg-black pt-6 pb-10 md:top-18 lg:hidden">
           <div className="flex flex-col gap-y-4">
             <NavItems />
           </div>
@@ -75,7 +75,13 @@ function NavItems() {
 
 // Navigation item component
 function NavItem(props: AnimatedLinkProps) {
-  return <AnimatedLink className="text-white/70" underlineClassName="bg-white/70" {...props} />;
+  return (
+    <AnimatedLink
+      className="transition-color text-white/70 duration-300 hover:text-white"
+      underlineClassName="bg-white"
+      {...props}
+    />
+  );
 }
 
 // Mobile menu component
