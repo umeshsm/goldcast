@@ -17,7 +17,10 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/images/favicon.png" sizes="any" />
       </head>
-      <body className={cn('font-inter antialiased', inter.variable, interTight.variable)}>
+      <body
+        className={cn('font-inter antialiased', inter.variable, interTight.variable)}
+        suppressHydrationWarning
+      >
         <Header />
         {children}
         <Footer />
