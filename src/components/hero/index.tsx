@@ -19,13 +19,14 @@ export default function Hero() {
 
   useGSAP(
     () => {
-      gsap.to('.bg-image', { opacity: '100%', translateY: 0, duration: 2 });
+      // gsap.to('.bg-image', { opacity: '100%', translateY: 0, duration: 2 });
       gsap.to('.future-word', { color: '#ff4200', duration: 2 });
-      gsap.to('.hero-description', {
-        duration: 3,
-        scrambleText:
-          'Join the network educating enterprise marketing leaders on the practical application of AI in their day-to-day work.',
-      });
+      gsap.to('.apply-now-cta', { scrambleText: 'Apply Now', duration: 2 });
+      // gsap.to('.hero-description', {
+      //   duration: 3,
+      //   scrambleText:
+      //     'Join the network educating enterprise marketing leaders on the practical application of AI in their day-to-day work.',
+      // });
     },
     { scope: container }
   );
@@ -38,19 +39,22 @@ export default function Hero() {
       <Image
         src={HeroBg}
         alt="Hero background image"
-        className="bg-image absolute top-[130px] left-1/2 w-full max-w-[1440px] -translate-x-1/2 -translate-y-full opacity-0 md:top-22 lg:top-16 xl:top-2"
+        className="bg-image absolute top-[130px] left-1/2 w-full max-w-[1440px] -translate-x-1/2 md:top-22 lg:top-16 xl:top-2"
         priority
       />
       <Container className="flex flex-col items-center">
         <h1 className="hero-heading font-inter-tight relative z-10 mt-[162px] text-center text-[38px] leading-[1] text-white md:text-[76px] lg:text-[100px] xl:text-[140px] xl:leading-[118px]">
           the <span className="future-word font-bold italic">future</span> is AI.
         </h1>
-        <p className="hero-description relative z-10 mt-6 max-w-[985px] text-center text-[18px] leading-[1.3] text-white md:text-[20px] lg:text-[22px] xl:text-[28px]"></p>
+        <p className="hero-description relative z-10 mt-6 max-w-[985px] text-center text-[18px] leading-[1.3] text-white md:text-[20px] lg:text-[22px] xl:text-[28px]">
+          Join the network educating enterprise marketing leaders on the practical application of AI
+          in their day-to-day work.
+        </p>
         <Button
           variant="pinkGradient"
           className="font-inter-tight z-10 mt-[30px] rounded-[8px] transition-all duration-200 hover:scale-110"
         >
-          Apply Now <ChevronRight className="size-5" />
+          <span className="apply-now-cta"></span> <ChevronRight className="size-5" />
         </Button>
       </Container>
     </section>
